@@ -7,13 +7,13 @@ interface OwnProps {
 }
 
 const Downmenu: React.FC<OwnProps> = ({ downmenu, menus, top, left }) => {
-  console.log(menus);
+
   return (
     <ul
-      className={`${downmenu} w-[97px] border shadow-md pt-[20px] pb-[20px] pl-[20px] pr-[20px] text-[11px] absolute top-[${top}] left-[${left}]`}
-    >
-      {menus.map((info) => (
-        <li className="pb-[8px] text-center">{info}</li>
+    className={`${downmenu} w-[97px] border shadow-md pt-[20px] pb-[20px] pl-[20px] pr-[20px] text-[11px] absolute top-[${top}] left-[${left}] bg-white`}
+  >
+      {menus.map((info,index) => (
+        <li className="pb-[8px] text-center" key={index}>{info}</li>
       ))}
     </ul>
   );
