@@ -26,7 +26,7 @@ const Nav = () => {
       >
         x
       </Link>
-      <div className="w-full bg-loginbg h-9 content-center grid place-items-center">
+      <div className="w-full bg-loginbg h-[32px] content-center grid place-items-center">
         <div className="w-[1020px] flex flex-row justify-between text-[11px] ">
           <div>
             <Link to="/" className="pt-[10px] pl-[12px]">
@@ -88,19 +88,49 @@ const Nav = () => {
                 </div>
               </div>
               <div >{/*마이쿠팡*/}
-                <div className="w-[44px] flex justify-center align-center mr-[20px]">
+                <div className="w-[44px] flex justify-center content-center mr-[20px]">
                   <img className="w-[30px] h-[30px]" src="https://static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_new_gnb.svg#person" />
                 </div>
-                <span className="text-[12px] leading-[15px]">마이쿠팡</span>
+                <span className="text-[12px] leading-[15px] mr-[20px]">마이쿠팡</span>
               </div>
               <div >{/*장바구니*/}
-                <div className="w-[44px] flex justify-center align-center">
+                <div className="w-[44px] flex justify-center content-center">
                   <img className="w-[30px] h-[30px]" src="https://static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_new_gnb.svg#cart" />
                 </div>
                 <span className="text-[12px] leading-[15px]">장바구니</span>
               </div>
             </div>
-            <div className="w-[110px] h-[59px]">쿠팡플레이</div>
+            <div className="w-[880px]  flex flex-row relative top-[-1px] left-[-22px]">
+              <img className="w-[20px] h-[32px] object-contain object-center" src="//img1a.coupangcdn.com/image/coupang/common/pc_gnb_arrow-left-gray@2x.png" />
+              <div className="flex flex-row content-center flex-wrap pr-[5px]">{/*쿠팡 플레이 외 메뉴*/}
+                <div className="content-center flex flex-row flex-wrap">
+                  <div className="h-[32px] content-center"><img className="w-[20px] h-[20px] mr-[2px] object-center" src="img/coupangplaylogo.png" /></div>
+                  <span className="text-[12px] text-[#333] pr-[5px] content-center">쿠팡플레이</span>
+
+                  <div className="h-[32px] content-center"><img className="w-[25px] h-[20px] mr-[2px] ml-[10px] pl-[5px]" src="img/rocket.png" /></div>
+                  <span className="text-[12px] text-[#333] pr-[5px] content-center">로켓배송</span>
+                  <div className="h-[32px] content-center"><img className="w-[25px] h-[20px] mr-[2px] ml-[10px] pl-[5px]" src="img/rocket2.png" /></div>
+                  <span className="text-[12px] text-[#333] pr-[5px] content-center">로켓프레시</span>
+                  <div className="h-[32px] content-center"><img className="w-[25px] h-[25px] mr-[2px] ml-[10px] pl-[5px] object-contain" src="img/icon.png" /></div>
+                  <span className="text-[12px] text-[#333] pr-[5px] content-center">가정의 달</span>
+                  <div className="h-[32px] content-center"><img className="w-[25px] h-[25px] mr-[2px] ml-[10px] pl-[5px] object-contain " src="img/biz.png" /></div>
+                  <span className="text-[12px] text-[#333] pr-[5px] content-center">쿠팡비즈</span>
+                  <div className="h-[32px] content-center"><img className="w-[25px] h-[20px] mr-[2px] ml-[10px] pl-[5px]" src="img/rocket3.png" /></div>
+                  <span className="text-[12px] text-[#333] pr-[5px] content-center">로켓직구</span>
+                  <span className="ml-[10px] pl-[5px] text-[12px] text-[#333] pr-[5px] content-center">골드박스</span>
+                  <span className="ml-[10px] pl-[5px] text-[12px] text-[#333] pr-[5px] content-center">와우할인할인</span>
+                  <span className="ml-[10px] pl-[5px] text-[12px] text-[#333] pr-[5px] content-center">이벤트/쿠폰</span>
+                  <div className="h-[32px] content-center"><img className="w-[25px] h-[20px] mr-[2px] ml-[10px] pl-[5px]" src="img/market.png" /></div>
+                  <span className="text-[12px] text-[#333] pr-[5px] content-center">반품마켓</span>
+                  <div className="h-[32px] content-center"><img className="w-[25px] h-[20px] mr-[2px] ml-[10px] pl-[5px]" src="img/shop.png" /></div>
+                  <span className="text-[12px] text-[#333] pr-[5px] content-center">착한상점</span>
+                  <span className="ml-[10px] pl-[5px] text-[12px] text-[#333] pr-[5px] content-center">기획전</span>
+                  <div className="h-[32px] content-center"><img className="w-[25px] h-[20px] mr-[2px] ml-[10px] pl-[5px]" src="img/plane.png" /></div>
+                  <span className="text-[12px] text-[#333] pr-[5px] content-center">여행/티켓</span>
+                </div>
+              </div>
+              <img className="w-[20px] h-[32px] object-contain" src="//img1a.coupangcdn.com/image/coupang/common/pc_gnb_arrow-right@2x.png" />
+            </div>
           </div>
         </div>
       </div>
