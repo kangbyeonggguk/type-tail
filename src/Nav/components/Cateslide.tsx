@@ -26,7 +26,7 @@ interface OwnProps {
 const Cateslide: React.FC<OwnProps> = ({ downslide }) => {
   return (
     <ul
-      className={`${downslide} border shadow-md  text-[11px] absolute bg-white z-10 top-[217px] left-[154px] pt-[8px] pb-[8px]`}
+      className={`${downslide} border shadow-md  text-[11px] absolute bg-white z-10 top-[114px] left-[0px] pt-[8px] pb-[8px]`}
     >
       {catelist.map((info, index) => (
         <div
@@ -34,6 +34,7 @@ const Cateslide: React.FC<OwnProps> = ({ downslide }) => {
           className={`h-[29px] ${index >= 15 ? "mt-[6px]" : "none"}`}
         >
           <a
+            id={`cate ${index}`}
             className={`w-[165px] text-[12px] pt-[9px] pl-[51px] inline-block ${
               index >= 14 ? "pb-[8px]" : "none"
             }`}
@@ -42,6 +43,16 @@ const Cateslide: React.FC<OwnProps> = ({ downslide }) => {
               backgroundPosition: `-8px ${info[1]}px`,
               borderBottom:
                 index === 14 || index === 15 ? "1px solid #ddd" : "none",
+            }}
+            onMouseOver={() => {
+              const element: any = document.getElementById(`cate ${index}`);
+              element.style.color = "#4285f4";
+              element.style.backgroundPositionX = `-200px`;
+            }}
+            onMouseOut={() => {
+              const element: any = document.getElementById(`cate ${index}`);
+              element.style.color = "#333";
+              element.style.backgroundPositionX = `-8px`;
             }}
           >
             {info[2]}

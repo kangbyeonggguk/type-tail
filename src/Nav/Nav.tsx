@@ -40,7 +40,7 @@ const Nav = () => {
             </Link>
             <Link
               to="/"
-              className="pt-[10px] pl-[12px] relative"
+              className="pt-[10px] pl-[12px] pb-[10px] relative"
               onMouseOver={() => setDownmenu("block")}
               onMouseOut={() => setDownmenu("hidden")}
             >
@@ -50,6 +50,7 @@ const Nav = () => {
                 menus={["오픈마켓", "여행.티켓", "로켓배송", "제휴마케팅"]}
                 top={"2rem"}
                 left={"-1rem"}
+                id={"입점신청"}
               />
             </Link>
           </div>
@@ -71,7 +72,7 @@ const Nav = () => {
       <div>
         <div className="flex flex-row">
           <div
-            className="w-[110px] h-[115px] bg-blue-500 flex flex-col justify-center cursor-default mr-[30px]"
+            className="w-[110px] h-[115px] bg-blue-500 flex flex-col justify-center cursor-default mr-[30px] relative z-5"
             onMouseOver={() => {
               setcatedownmenu("block");
             }}
@@ -122,7 +123,7 @@ const Nav = () => {
               </div>
               <Link
                 to="/"
-                className="relative"
+                className="relative "
                 onMouseOver={() => setMycoupangdownmenu("block")}
                 onMouseOut={() => setMycoupangdownmenu("hidden")}
               >
@@ -133,7 +134,7 @@ const Nav = () => {
                     src="https://static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_new_gnb.svg#person"
                   />
                 </div>
-                <span className="text-[12px] leading-[15px] mr-[20px]">
+                <span className="text-[12px] leading-[15px] mr-[20px] pb-[100px]">
                   마이쿠팡
                 </span>
                 <Downmenu
@@ -141,6 +142,7 @@ const Nav = () => {
                   menus={["주문목록", "취소/반품", "찜 리스트"]}
                   top={"4.2rem"}
                   left={"-1.4rem"}
+                  id={"마이쿠팡"}
                 />
               </Link>
               <div>
@@ -158,7 +160,11 @@ const Nav = () => {
               {/*메뉴 왼쪽 화살표*/}
               <img
                 className="w-[20px] h-[32px] object-contain object-center"
-                src="//img1a.coupangcdn.com/image/coupang/common/pc_gnb_arrow-left@2x.png"
+                src={
+                  menuslide == 0
+                    ? "//img1a.coupangcdn.com/image/coupang/common/pc_gnb_arrow-left-gray@2x.png"
+                    : "//img1a.coupangcdn.com/image/coupang/common/pc_gnb_arrow-left@2x.png"
+                }
                 onClick={() => {
                   setMenuslide(0);
                 }}
@@ -170,7 +176,11 @@ const Nav = () => {
               {/*메뉴 오른쪽 화살표*/}
               <img
                 className="w-[20px] h-[32px] object-contain"
-                src="//img1a.coupangcdn.com/image/coupang/common/pc_gnb_arrow-right@2x.png"
+                src={
+                  menuslide == 0
+                    ? "//img1a.coupangcdn.com/image/coupang/common/pc_gnb_arrow-right@2x.png"
+                    : "//img1a.coupangcdn.com/image/coupang/common/pc_gnb_arrow-right-gray@2x.png"
+                }
                 onClick={() => {
                   setMenuslide(-323);
                 }}

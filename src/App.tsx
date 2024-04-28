@@ -11,8 +11,10 @@ import Nav from "./Nav/Nav";
 const App: React.FC = () => {
   return (
     <>
-      <main>
+      <main className="">
         <BrowserRouter>
+          <Nav />
+
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
